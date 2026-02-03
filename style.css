@@ -188,7 +188,6 @@ header {
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    flex: 1;
 }
 
 .header-icon {
