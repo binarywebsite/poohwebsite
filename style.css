@@ -1054,3 +1054,100 @@ footer {
         font-size: 0.8rem;
     }
 }
+
+/* =============== LIGHTBOX MODAL =============== */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    width: 90%;
+    max-width: 900px;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 10px;
+    animation: zoom 0.3s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 30px;
+    right: 45px;
+    color: #D4920A;
+    font-size: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+.lightbox-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #D4920A;
+    padding: 20px 0;
+    height: 30px;
+    font-family: var(--font-heading);
+}
+
+/* Mobile adjustments for lightbox */
+@media (max-width: 768px) {
+    .lightbox {
+        padding-top: 30px;
+    }
+    
+    .lightbox-content {
+        width: 95%;
+        max-height: 80vh;
+    }
+    
+    .lightbox-close {
+        top: 15px;
+        right: 25px;
+        font-size: 40px;
+    }
+}
+
+/* Add cursor pointer to gallery images */
+.gallery-item img {
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}

@@ -102,4 +102,38 @@ document.addEventListener('DOMContentLoaded', () => {
     
     artsSection.appendChild(gallery);
 
+    // Lightbox functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.querySelector('.lightbox-close');
+    const lightboxCaption = document.querySelector('.lightbox-caption');
+
+    // Add click event to all gallery images
+    gallery.addEventListener('click', (e) => {
+        if (e.target.tagName === 'IMG') {
+            lightbox.style.display = 'block';
+            lightboxImg.src = e.target.src;
+            lightboxCaption.textContent = e.target.alt;
+        }
+    });
+
+    // Close lightbox on click of close button
+    lightboxClose.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+    });
+
+    // Close lightbox on click outside image
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.style.display = 'none';
+        }
+    });
+
+    // Close lightbox on ESC key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.style.display === 'block') {
+            lightbox.style.display = 'none';
+        }
+    });
+
 });
