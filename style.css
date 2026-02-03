@@ -175,7 +175,7 @@ header {
     top: 1.5rem;
     left: 2rem;
     right: 2rem;
-    width: auto;
+    width: calc(100% - 4rem);
     z-index: 1000;
     display: flex;
     align-items: center;
@@ -411,6 +411,7 @@ section {
         top: 0.75rem;
         left: 0.75rem;
         right: 0.75rem;
+        width: calc(100% - 1.5rem);
     }
     
     .header-logo {
@@ -469,6 +470,7 @@ section {
         top: 0.6rem;
         left: 0.6rem;
         right: 0.6rem;
+        width: calc(100% - 1.2rem);
     }
     
     .header-logo {
