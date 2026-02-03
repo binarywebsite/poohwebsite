@@ -173,9 +173,11 @@ main {
 header {
     position: fixed;
     top: 1.5rem;
-    left: 2rem;
-    right: 2rem;
-    width: calc(100% - 4rem);
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 0 2rem;
+    box-sizing: border-box;
     z-index: 1000;
     display: flex;
     align-items: center;
@@ -409,9 +411,10 @@ section {
 @media (max-width: 768px) {
     header {
         top: 0.75rem;
-        left: 0.75rem;
-        right: 0.75rem;
-        width: calc(100% - 1.5rem);
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 0 0.75rem;
     }
     
     .header-logo {
@@ -468,9 +471,10 @@ section {
 @media (max-width: 480px) {
     header {
         top: 0.6rem;
-        left: 0.6rem;
-        right: 0.6rem;
-        width: calc(100% - 1.2rem);
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 0 0.6rem;
     }
     
     .header-logo {
