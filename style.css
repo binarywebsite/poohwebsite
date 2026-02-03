@@ -23,6 +23,7 @@
 .honey-drip {
     position: relative;
     display: inline-block;
+    font-family: var(--font-heading);
     /* Dark golden honey gradient - like real honey */
     background: linear-gradient(
         180deg,
@@ -132,12 +133,22 @@ html::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera */
 }
 
+html {
+    width: 100%;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
 body {
     font-family: var(--font-body);
     background-color: var(--color-bg);
     color: var(--color-text);
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 /* Typography */
@@ -151,6 +162,11 @@ h6 {
     color: var(--color-text);
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+main {
+    width: 100%;
+    overflow-x: hidden;
 }
 
 /* Header */
@@ -391,6 +407,32 @@ section {
 
 /* Mobile (max 768px) */
 @media (max-width: 768px) {
+    header {
+        top: 0.75rem;
+        left: 0.75rem;
+        right: 0.75rem;
+    }
+    
+    .header-logo {
+        gap: 0.2rem;
+    }
+    
+    .header-icon {
+        width: 38px;
+        height: 38px;
+    }
+    
+    .header-text {
+        font-size: 0.9rem;
+        font-family: var(--font-heading);
+        letter-spacing: 1px;
+    }
+    
+    .header-twitter {
+        width: 38px;
+        height: 38px;
+    }
+    
     #hero {
         min-height: auto;
         height: auto;
@@ -404,6 +446,7 @@ section {
     .hero-content h1 {
         font-size: 2.5rem;
         margin-bottom: 0.8rem;
+        font-family: var(--font-heading);
     }
     
     .hero-content .tagline {
@@ -413,19 +456,55 @@ section {
     
     .hero-image-frame {
         margin-top: 1.5rem;
-        max-width: 300px;
+        max-width: 240px;
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        border-radius: 10px;
+        padding: 0;
     }
 }
 
 /* Small Mobile (max 480px) */
 @media (max-width: 480px) {
+    header {
+        top: 0.6rem;
+        left: 0.6rem;
+        right: 0.6rem;
+    }
+    
+    .header-logo {
+        gap: 0.15rem;
+    }
+    
+    .header-icon {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .header-text {
+        font-size: 0.85rem;
+        font-family: var(--font-heading);
+        letter-spacing: 0.5px;
+    }
+    
+    .header-twitter {
+        width: 36px;
+        height: 36px;
+    }
+    
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
     #hero {
         padding: 80px 1rem 1.5rem;
+        width: 100%;
     }
     
     .hero-content h1 {
         font-size: 2rem;
         margin-bottom: 0.5rem;
+        font-family: var(--font-heading);
     }
     
     .hero-content .tagline {
@@ -435,9 +514,11 @@ section {
     
     .hero-image-frame {
         margin-top: 1rem;
-        padding: 0.8rem;
-        max-height: 250px;
-        border-radius: 15px;
+        padding: 0;
+        max-height: 210px;
+        max-width: 210px;
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        border-radius: 10px;
     }
 }
 
@@ -669,7 +750,6 @@ section {
     padding-bottom: 1rem;
     scroll-behavior: smooth;
     animation: scroll-carousel 60s linear infinite;
-    width: 100%;
 }
 
 @keyframes scroll-carousel {
@@ -789,11 +869,7 @@ footer {
     /* Header */
     header {
         justify-content: center;
-        padding: 1.5rem 1rem;
-        gap: 1rem;
-        top: 1rem;
-        left: 1rem;
-        right: 1rem;
+        padding: 1rem 3%;
     }
 
     nav {
@@ -802,74 +878,31 @@ footer {
 
     header .logo.honey-drip {
         font-size: 1.1rem;
-        font-family: var(--font-heading);
-    }
-
-    .header-text {
-        font-family: var(--font-heading);
-        font-size: 1rem;
-    }
-
-    .header-icon {
-        width: 40px;
-        height: 40px;
-    }
-
-    .header-twitter {
-        width: 40px;
-        height: 40px;
-    }
-
-    .header-twitter svg {
-        width: 20px;
-        height: 20px;
     }
 
     /* Hero */
     #hero {
-        padding-top: 100px;
-        padding-bottom: 2rem;
+        padding-top: 80px;
     }
 
     .hero-content h1.honey-drip {
         font-size: 2.5rem;
         padding: 0 1rem;
-        font-family: var(--font-heading);
     }
 
     .hero-content .tagline {
         font-size: 1rem;
         padding: 0 1rem;
-        font-family: var(--font-body);
-    }
-
-    .hero-image-frame {
-        max-width: 250px;
-        border: 1px solid rgba(212, 175, 55, 0.3);
-        padding: 0;
-        margin-top: 1.5rem;
-    }
-
-    .btn-buy-now {
-        font-family: var(--font-heading);
-        font-size: 0.85rem;
-        padding: 0.6rem 1.8rem;
     }
 
     /* Sections */
     section {
         padding: 4rem 3%;
         min-height: auto;
-        font-family: var(--font-body);
     }
 
     h2.honey-drip {
         font-size: 1.8rem;
-        font-family: var(--font-heading);
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-        font-family: var(--font-heading);
     }
 
     /* Generator */
@@ -935,78 +968,33 @@ footer {
 
     /* Gallery */
     .gallery-grid {
-        display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
         padding: 0 3%;
-        animation: none;
-        overflow: visible;
-        width: 100%;
-    }
-
-    .gallery-item {
-        min-width: auto;
-        width: 100%;
-        height: 150px;
-    }
-
-    #arts {
-        overflow: visible;
-        width: 100%;
-        padding: 4rem 0;
     }
 
     /* Footer */
     .footer-nav a {
         margin: 0 0.5rem;
         font-size: 0.8rem;
-        font-family: var(--font-heading);
-    }
-
-    footer {
-        font-family: var(--font-body);
     }
 }
 
 @media (max-width: 480px) {
-    header {
-        padding: 1rem 0.5rem;
-        gap: 0.5rem;
-    }
-
     header .logo.honey-drip {
-        font-size: 0.85rem;
-        font-family: var(--font-heading);
-    }
-
-    .header-text {
-        font-family: var(--font-heading);
         font-size: 0.9rem;
-    }
-
-    .header-icon {
-        width: 35px;
-        height: 35px;
-    }
-
-    .header-twitter {
-        width: 35px;
-        height: 35px;
     }
 
     .hero-content h1.honey-drip {
         font-size: 1.8rem;
-        font-family: var(--font-heading);
     }
 
     .hero-content .tagline {
         font-size: 0.9rem;
-        font-family: var(--font-body);
     }
 
     h2.honey-drip {
         font-size: 1.4rem;
-        font-family: var(--font-heading);
     }
 
     .token-grid {
@@ -1014,31 +1002,19 @@ footer {
     }
 
     .gallery-grid {
-        display: grid;
         grid-template-columns: 1fr;
-        animation: none;
-        overflow: visible;
-    }
-
-    .gallery-item {
-        min-width: auto;
-        width: 100%;
-        height: 200px;
     }
 
     .about-text {
-        font-family: var(--font-body);
         font-size: 1rem;
         padding: 0 1rem;
     }
 
     .content h3 {
         font-size: 1rem;
-        font-family: var(--font-heading);
     }
 
     .content ul {
         font-size: 0.8rem;
-        font-family: var(--font-body);
     }
 }

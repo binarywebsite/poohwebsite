@@ -83,13 +83,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const gallery = document.createElement('div');
     gallery.className = 'gallery-grid';
     
-    // Determine if we're on mobile
-    const isMobile = window.innerWidth <= 768;
-    
-    // On mobile, show images once. On desktop, duplicate for seamless loop
-    const imagesToShow = isMobile ? imageList : [...imageList, ...imageList];
-    
-    imagesToShow.forEach(filename => {
+    // Add images twice for seamless looping
+    [...imageList, ...imageList].forEach(filename => {
         const item = document.createElement('div');
         item.className = 'gallery-item observe-fade';
         
