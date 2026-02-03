@@ -188,6 +188,7 @@ header {
     display: flex;
     align-items: center;
     gap: 0.8rem;
+    flex: 1;
 }
 
 .header-icon {
@@ -448,7 +449,7 @@ section {
     }
     
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 5.5rem;
         margin-bottom: 0.8rem;
         font-family: var(--font-heading);
     }
@@ -508,7 +509,7 @@ section {
     }
     
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 4.5rem;
         margin-bottom: 0.5rem;
         font-family: var(--font-heading);
     }
