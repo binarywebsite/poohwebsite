@@ -325,7 +325,9 @@ section {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 14px;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .btn-buy-now {
@@ -396,7 +398,7 @@ section {
 @media (max-width: 768px) {
     #hero {
         height: 100vh;
-        padding: 0 1.5rem 2rem;
+        padding: 0 1rem 2rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -408,13 +410,19 @@ section {
     }
     
     .hero-content h1 {
-        font-size: 4rem;
+        font-size: 3.5rem;
         margin-top: 0;
-        margin-bottom: 1rem;
-        font-family: 'More Sugar', 'Outfit', sans-serif;
-        font-weight: 900;
-        letter-spacing: 0px;
-        line-height: 1;
+        margin-bottom: 1.5rem;
+        font-family: 'Outfit', sans-serif !important;
+        font-weight: 900 !important;
+        letter-spacing: 0px !important;
+        line-height: 1 !important;
+    }
+    
+    .hero-content h1.honey-drip {
+        font-size: 3.5rem !important;
+        margin-bottom: 1.5rem !important;
+        margin-top: 0 !important;
     }
     
     .hero-content .tagline {
@@ -423,15 +431,18 @@ section {
     }
     
     .hero-image-frame {
-        margin-top: 1.5rem;
-        max-width: 240px;
+        margin-top: 1rem;
+        max-width: 280px;
+        width: 100%;
         border: 2px solid rgba(212, 175, 55, 0.3);
         border-radius: 12px;
+        overflow: hidden;
     }
     
     .btn-buy-now {
         padding: 0.7rem 2rem;
         font-size: 0.9rem;
+        margin-top: 1.5rem;
     }
 }
 
@@ -446,12 +457,19 @@ section {
     }
     
     .hero-content h1 {
-        font-size: 3.2rem;
+        font-size: 3rem;
         margin-top: 0;
-        margin-bottom: 0.8rem;
-        font-family: 'More Sugar', 'Outfit', sans-serif;
-        font-weight: 900;
-        letter-spacing: 0px;
+        margin-bottom: 1.5rem;
+        font-family: 'Outfit', sans-serif !important;
+        font-weight: 900 !important;
+        letter-spacing: 0px !important;
+        line-height: 1 !important;
+    }
+    
+    .hero-content h1.honey-drip {
+        font-size: 3rem !important;
+        margin-bottom: 1.5rem !important;
+        margin-top: 0 !important;
     }
     
     .hero-content .tagline {
@@ -461,14 +479,17 @@ section {
     
     .hero-image-frame {
         margin-top: 1rem;
-        max-width: 200px;
+        max-width: 260px;
+        width: 100%;
         border: 2px solid rgba(212, 175, 55, 0.3);
         border-radius: 12px;
+        overflow: hidden;
     }
     
     .btn-buy-now {
-        padding: 0.6rem 1.8rem;
-        font-size: 0.85rem;
+        padding: 0.7rem 2rem;
+        font-size: 0.9rem;
+        margin-top: 1.5rem;
     }
 }
 
