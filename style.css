@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=More+Sugar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
 
 :root {
     --color-bg: #050505;
@@ -7,8 +7,8 @@
     --color-gold-hover: #D4920A;
     --color-text: #FFFFFF;
     --color-text-muted: #A0A0A0;
-    --font-heading: 'More Sugar', cursive;
-    --font-body: 'More Sugar', cursive;
+    --font-heading: 'Chewy', cursive;
+    --font-body: 'Chewy', cursive;
     --transition-speed: 0.3s;
     
     /* Dark realistic honey colors */
