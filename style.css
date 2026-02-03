@@ -142,7 +142,7 @@ html {
 body {
     font-family: var(--font-body);
     background-color: var(--color-bg);
-    background-image: url('art/tlopooh.png');
+    background-image: url('art/background_for_pooh.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -331,7 +331,6 @@ section {
 
 .hero-image-frame {
     margin-top: 2.5rem;
-    border: 2px solid rgba(212, 175, 55, 0.3);
     border-radius: 15px;
     background: transparent;
     animation: fadeInUp 1s ease forwards 0.6s;
@@ -478,10 +477,8 @@ section {
         margin-top: 0;
         margin-bottom: 0.5rem;
         max-width: 240px;
-        border: 1px solid rgba(212, 175, 55, 0.2);
         border-radius: 10px;
         padding: 0;
-    }
     }
 }
 
@@ -558,7 +555,6 @@ section {
         padding: 0;
         max-height: 210px;
         max-width: 210px;
-        border: 1px solid rgba(212, 175, 55, 0.2);
         border-radius: 10px;
     }
 }
